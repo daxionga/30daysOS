@@ -1,5 +1,5 @@
 .. 30DayOS documentation master file, created by
-   sphinx-quickstart on Mon Apr 25 21:12:58 2022.
+   sphinx-quickstart on Mon Apr 25 21:53:02 2022.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 

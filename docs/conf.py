@@ -18,11 +18,11 @@
 # -- Project information -----------------------------------------------------
 
 project = '30DayOS'
-copyright = '2022, liaRen'
-author = 'liaRen'
+copyright = '2022, LiaRen'
+author = 'LiaRen'
 
 # The full version, including alpha/beta/rc tags
-release = '-1'
+release = '-0.1'
 
 
 # -- General configuration ---------------------------------------------------
@@ -46,7 +46,7 @@ language = 'zh_CN'
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = []
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 
 # -- Options for HTML output -------------------------------------------------
