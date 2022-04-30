@@ -1,0 +1,3 @@
+[submodule "docs/day1/envWithDocker"]
+	path = docs/day1/envWithDocker
+	url = https://github.com/HariboteOS/tolenv.git
