@@ -12,6 +12,7 @@ Welcome to 30DayOS's documentation!
 .. toctree::
    :maxdepth: 2
    :caption: day1:
+   
    day1/enviromentConfig.md
 
 
