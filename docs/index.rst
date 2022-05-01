@@ -7,13 +7,22 @@ Welcome to 30DayOS's documentation!
 ===================================
 关于项目
 ---------
-这是一个五一没事干,学习用的[项目](https://github.com/daxionga/30daysOS),具体就是跟一个15岁的小孩写[操作系统](htttp://hrb.osask.jp)
+这是一个五一没事干,学习用的项目(https://github.com/daxionga/30daysOS)  
+
+具体就是跟一个15岁的小孩写操作系统(http://hrb.osask.jp/)
 
 .. toctree::
    :maxdepth: 1
    :caption: day1:
 
    day1/enviromentConfig.md
+
+.. toctree::
+   :maxdepth: 1
+   :caption: day2:
+
+   day2/asmAndRegister.md
+   day2/codePratice.md
 
 
 

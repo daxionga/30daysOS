@@ -16,7 +16,7 @@ $(pwd)/$(dirname $0)
 
 </br></br>
 <p style=color:red>todo:有些东西还没弄明白，在代码注释里，到时候以后明白了给注释补上,另外还得测试那个磁盘名等那些字符串是由于固定了字段长度不让改,还是由于他前面写了jmp到一个固定地址不然改</p>    
-<p><font color=#ffff00>todo:objdmp反汇编这个得学,online只是临时的链接而且也不全</font></p>
+<p><font color=blue>todo:objdmp反汇编这个得学,online只是临时的链接而且也不全</font></p>
 
 [x86/64在线查反汇编](https://defuse.ca/online-x86-assembler.htm)
 
@@ -74,4 +74,11 @@ RESB 1469432
 其实还有qemu的配置,我现在是起另外ubuntu容器来运行qemu
 
 <p style=color:red>todo:改天我给他这个容器整理逆向一个dockerfile,把qemu也合到一个容器里</p>
-<p style=color:green>环境不是主要问题,这本书内容才是,我打算切回windows进行开发学习了</p>
+<p style=color:green>环境不是主要问题,这本书内容才是,发现docker里面qemu起不来,但是不重要了,不想因为折腾环境把事情搞得一团糟,以后又时间会把环境整理一下的,现在我就用本地的qemu就好了</p>
+
+这里说一下这个qemu的安装,其实也不用说,但是为了完整性说一下
+```bash
+sudo apt upgrade
+sudo apt install qemu-system-x86 
+```
+妥
