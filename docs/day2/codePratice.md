@@ -24,6 +24,10 @@ run :
 install : 
 	../z_tools/make.exe img
 	../z_tools/imgtol.com w a: helloos.img
+	
+clean :
+	-del ipl.bin
+	-del ipl.lst	
 ```
 
 
