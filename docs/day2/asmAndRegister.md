@@ -55,3 +55,38 @@ INT 0x10
 ```
 调用,具体程序见[这里](./codePratice.md)  
 还有个指令hlt,就是halt的意思,就是,汇编指令基本就是这样
+
+## x86寄存器  
+按地址递增顺序为
+| 寄存器名|  注解| 地址|
+|:------:|:---:|:---:|
+|  AL    | AX low| 0xb0|
+|  CL    | CX low| 0xb1|
+|  DL    | DX low| 0xb2|
+|  BL    | BX low| 0xb3|
+|  AH    | AX high| 0xb4|
+|  CH    | CX high| 0xb5|
+|  DH 	 | DX high| 0xb6|
+|  BH    | BX high| 0xb7|
+|  AX    | 累加器|0xB8|
+|  CX    | 计数器 |0xB9|
+|  DX	 | data  |0xba|
+|  BX	 | base address|0xbb|
+|  SP 	 |stack pointer|0xbc|
+|  BP	 | base pointer|0xbd|
+|  SI	 | source index 原变址寄存器| 0xbe| 
+|  DI	 | Destination index 目的变址寄存器|0xbf|
+
+前8个是8位寄存器,后面8个是16位寄存器,AX CX DX 里面的X 是代表extend(扩展),如果用32位,则为EAX,ECX,EDX 这里面这个E还是代表extend(扩展),又扩展一次,64位汇编是RAX RBX 地址顺序变了,这里的R我不知道是啥意思,还是extend(扩展)里的R吧.  
+行这个说完了,然后还有两点,变址寻址和这个我不知道叫什么,我就管它叫byte cast吧  
+
+### 变址寻址
+
+这个老生长谈了,所有CPU都有,但是区别在于,intel的汇编是CISC(complex Instruction set computer)他的寻址方式特别多,其中一种是
+
+```x86asm
+mov AL [ES:BX] 
+```
+16位情况下这里的ES和BX组合到一起所代表的地址是 ES<<4 + BX ,means that ES\*16 + BX 也就是说,最大寻址范围为2^20+2^16-2^4,大概就是1M多了点,这个是16位寻址的情况,这个主要应用于BIOS启动的时候的程序,可以调用BIOS的一些功能,如果切换到32位以后,BIOS的功能是调用不了的,32位机器的寻址范围很大.至于32位怎么处理的,我决定先看一本书,叫*x86汇编语言从实模式到保护模式*这玩应挺有意思的,我决定先看这个,先把汇编这本书的文档先写了.
+
+### byte cast
